@@ -64,19 +64,19 @@ The purpose of this analysis is to convert experimental observations into action
 
 Agricultural productivity among smallholder farmers varies substantially across geographic environments due to differences in soil conditions, management practices, and environmental characteristics. Fertilizer recommendations that apply a uniform strategy across all environments may lead to:
 
-    1.  inefficient fertilizer utilization
-    2.	unnecessary input costs
-    3.	reduced crop yields
-    4.	nutrient losses
-    5.	inconsistent farmer outcomes
+    1.  Inefficient fertilizer utilization
+    2.	Unnecessary input costs
+    3.	Reduced crop yields
+    4.	Nutrient losses
+    5.	Inconsistent farmer outcomes
 
 OAF Inc., therefore, requires a data-driven framework capable of:
 
-    -	identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
-    -	understanding major drivers influencing yield variability
-    -	predicting yield outcomes under different conditions
-    -	supporting location-specific fertilizer recommendations
-    -	improving future decision making for field implementation
+        -	Identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
+        -	Understanding major drivers influencing yield variability
+        -	Predicting yield outcomes under different conditions
+        -	Supporting location-specific fertilizer recommendations
+        -	Improving future decision making for field implementation
 
 ## Project Goal
 
