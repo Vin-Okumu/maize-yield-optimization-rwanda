@@ -105,12 +105,12 @@ Determine environmental, soil, geographic and management factors associated with
 ### Sub-objectives:
 
 1.	Evaluate effects of:
- -	Soil characteristics
- -	Fertilizer inputs
- -	Seed rates
- -	Elevation
- -	Weather variables
- -	Management practices
+    -	Soil characteristics
+    -	Fertilizer inputs
+    -	Seed rates
+    -	Elevation
+    -	Weather variables
+    -	Management practices
 2.	Quantify variable importance
 3.	Identify potentially actionable drivers for intervention 
 
@@ -173,11 +173,11 @@ Assess geographic patterns and spatial variability of trial outcomes.
 -	Treatment recommendation maps
 
 ## Research Questions
--	RQ1: Which urea application strategy generates the highest maize yield within each mega-environment?
--	RQ2: Do treatment effects differ significantly across environments?
--	RQ3: Which environmental and management factors most strongly influence maize yield?
--	RQ4: Can maize yield be reliably predicted using observed environmental and management variables?
--	RQ5: Can location-specific fertilizer recommendations improve decision making?
+-	i: Which urea application strategy generates the highest maize yield within each mega-environment?
+-	ii: Do treatment effects differ significantly across environments?
+-	iii: Which environmental and management factors most strongly influence maize yield?
+-	iv: Can maize yield be reliably predicted using observed environmental and management variables?
+-	v: Can location-specific fertilizer recommendations improve decision making?
 
 ## Hypotheses
 
