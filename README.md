@@ -173,11 +173,11 @@ Assess geographic patterns and spatial variability of trial outcomes.
 -	Treatment recommendation maps
 
 ## Research Questions
--	i: Which urea application strategy generates the highest maize yield within each mega-environment?
--	ii: Do treatment effects differ significantly across environments?
--	iii: Which environmental and management factors most strongly influence maize yield?
--	iv: Can maize yield be reliably predicted using observed environmental and management variables?
--	v: Can location-specific fertilizer recommendations improve decision making?
+    i.  Which urea application strategy generates the highest maize yield within each mega-environment?
+    ii. Do treatment effects differ significantly across environments?
+    iii: Which environmental and management factors most strongly influence maize yield?
+    iv: Can maize yield be reliably predicted using observed environmental and management variables?
+    v: Can location-specific fertilizer recommendations improve decision making?
 
 ## Hypotheses
 
