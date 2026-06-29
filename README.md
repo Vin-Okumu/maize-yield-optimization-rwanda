@@ -63,12 +63,15 @@ The purpose of this analysis is to convert experimental observations into action
 ## Business Problem
 
 Agricultural productivity among smallholder farmers varies substantially across geographic environments due to differences in soil conditions, management practices, and environmental characteristics. Fertilizer recommendations that apply a uniform strategy across all environments may lead to:
+
     1.  inefficient fertilizer utilization
     2.	unnecessary input costs
     3.	reduced crop yields
     4.	nutrient losses
     5.	inconsistent farmer outcomes
+
 OAF Inc., therefore, requires a data-driven framework capable of:
+
     -	identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
     -	understanding major drivers influencing yield variability
     -	predicting yield outcomes under different conditions
@@ -81,7 +84,8 @@ Develop an analytical framework that can identify optimal strategies to apply ur
 
 ## Analytical objectives
 
-Objective 1: Evaluate urea rate and timing performance
+## Objective 1: Evaluate urea rate and timing performance
+
 Determine how different urea application rate and timing combinations affect maize yield across distinct mega-environments.
 
 ### Sub-objectives:
@@ -174,10 +178,10 @@ Assess geographic patterns and spatial variability of trial outcomes.
 
 ## Research Questions
     i.  Which urea application strategy generates the highest maize yield within each mega-environment?
-    ii. Do treatment effects differ significantly across environments?
+    ii.     Do treatment effects differ significantly across environments?
     iii:    Which environmental and management factors most strongly influence maize yield?
-    iv: Can maize yield be reliably predicted using observed environmental and management variables?
-    v:  Can location-specific fertilizer recommendations improve decision making?
+    iv:     Can maize yield be reliably predicted using observed environmental and management variables?
+    v:      Can location-specific fertilizer recommendations improve decision making?
 
 ## Hypotheses
 
@@ -209,6 +213,7 @@ Assess geographic patterns and spatial variability of trial outcomes.
 ### Assumptions
 
 This analysis is conducted under the following assumptions:
+
     -	Experimental observations are accurately recorded.
     -	Treatment allocation was appropriately randomized.
     -	External datasets (SoilGrids, CHIRPS) adequately represent field conditions.
@@ -219,6 +224,7 @@ This analysis is conducted under the following assumptions:
 ### Expected Business Value
 
 This analysis is expected to provide:
+
     -	Evidence-based fertilizer recommendations
     -	Improved understanding of drivers of productivity
     -	Scalable decision-support tools
