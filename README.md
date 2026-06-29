@@ -82,7 +82,7 @@ OAF Inc., therefore, requires a data-driven framework capable of:
 
 Develop an analytical framework that can identify optimal strategies to apply urea fertilizer across Rwanda’s maize-growing environments, and also generate a predictive and decision-support tool for future agronomic recommendations. 
 
-## Analytical objectives
+## Analytical Objectives
 
 ## Objective 1: Evaluate urea rate and timing performance
 
@@ -120,10 +120,10 @@ Determine environmental, soil, geographic and management factors associated with
 
 ### Expected output:
 
-    -	feature importance rankings
-    -	explanatory visualizations
+    -	Feature importance rankings
+    -	Explanatory visualizations
     -	SHAP analysis
-    -	driver interpretation
+    -	Driver interpretation
 
 ## Objective 3: Develop Yield Prediction Model
 
@@ -155,9 +155,9 @@ Develop a recommendation framework capable of supporting fertilizer strategy sel
 
 ## Expected output:
 
-    -	recommendation logic
-    -	decision rules
-    -	scenario simulations
+    -	Recommendation logic
+    -	Decision rules
+    -	Scenario simulations
 
 ## Objective 5: Conduct Spatial Analysis
 
@@ -177,7 +177,7 @@ Assess geographic patterns and spatial variability of trial outcomes.
     -	Treatment recommendation maps
 
 ## Research Questions
-    i.  Which urea application strategy generates the highest maize yield within each mega-environment?
+    i.      Which urea application strategy generates the highest maize yield within each mega-environment?
     ii.     Do treatment effects differ significantly across environments?
     iii:    Which environmental and management factors most strongly influence maize yield?
     iv:     Can maize yield be reliably predicted using observed environmental and management variables?
