@@ -63,11 +63,11 @@ The purpose of this analysis is to convert experimental observations into action
 ## Business Problem
 
 Agricultural productivity among smallholder farmers varies substantially across geographic environments due to differences in soil conditions, management practices, and environmental characteristics. Fertilizer recommendations that apply a uniform strategy across all environments may lead to:
-1.  inefficient fertilizer utilization
-2.	unnecessary input costs
-3.	reduced crop yields
-4.	nutrient losses
-5.	inconsistent farmer outcomes
+    1.  inefficient fertilizer utilization
+    2.	unnecessary input costs
+    3.	reduced crop yields
+    4.	nutrient losses
+    5.	inconsistent farmer outcomes
 OAF Inc., therefore, requires a data-driven framework capable of:
     -	identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
     -	understanding major drivers influencing yield variability
@@ -86,17 +86,17 @@ Determine how different urea application rate and timing combinations affect mai
 
 ### Sub-objectives:
 
-1.	Estimate effects across environments 
-2.	Identify the highest-performing treatment strategy within each mega-environment
-3.	Determine whether observed differences are statistically significant 
-4.	Assess whether the effectiveness of treatment changes according to environmental context
+    1.	Estimate effects across environments 
+    2.	Identify the highest-performing treatment strategy within each mega-environment
+    3.	Determine whether observed differences are statistically significant 
+    4.	Assess whether the effectiveness of treatment changes according to environmental context
 
 ## Expected output:
 
--	Treatment comparison tables
--	Statistical significance testing
--	Treatment x environment interaction analysis
--	Confidence estimates
+    -	Treatment comparison tables
+    -	Statistical significance testing
+    -	Treatment x environment interaction analysis
+    -	Confidence estimates
 
 ## Objective 2: Identify drivers of maize yield
 
@@ -104,22 +104,22 @@ Determine environmental, soil, geographic and management factors associated with
 
 ### Sub-objectives:
 
-1.	Evaluate effects of:
-    -	Soil characteristics
-    -	Fertilizer inputs
-    -	Seed rates
-    -	Elevation
-    -	Weather variables
-    -	Management practices
-2.	Quantify variable importance
-3.	Identify potentially actionable drivers for intervention 
+    1.	Evaluate effects of:
+        -	Soil characteristics
+        -	Fertilizer inputs
+        -	Seed rates
+        -	Elevation
+        -	Weather variables
+        -	Management practices
+    2.	Quantify variable importance
+    3.	Identify potentially actionable drivers for intervention 
 
 ### Expected output:
 
--	feature importance rankings
--	explanatory visualizations
--	SHAP analysis
--	driver interpretation
+    -	feature importance rankings
+    -	explanatory visualizations
+    -	SHAP analysis
+    -	driver interpretation
 
 ## Objective 3: Develop Yield Prediction Model
 
@@ -127,17 +127,17 @@ Build predictive models capable of estimating maize yield under varying agronomi
 
 ### Sub-objectives:
 
-1.	Compare baseline and machine learning approaches
-2.	Evaluate model performance
-3.	Assess generalizability
-4.	Quantify uncertainty
+    1.	Compare baseline and machine learning approaches
+    2.	Evaluate model performance
+    3.	Assess generalizability
+    4.	Quantify uncertainty
 
 ## Expected output:
--	Model comparison table
--	RMSE
--	MAE
--	R²
--	Cross-validation performance
+    -	Model comparison table
+    -	RMSE
+    -	MAE
+    -	R²
+    -	Cross-validation performance
 
 ## Objective 4: Develop Decision Support Framework
 
@@ -145,15 +145,15 @@ Develop a recommendation framework capable of supporting fertilizer strategy sel
 
 ### Sub-objectives:
 
-1.	Estimate expected yield under each treatment option
-2.	Recommend treatment strategies that maximize expected performance
-3.	Quantify expected gain and uncertainty 
+    1.	Estimate expected yield under each treatment option
+    2.	Recommend treatment strategies that maximize expected performance
+    3.	Quantify expected gain and uncertainty 
 
 ## Expected output:
 
--	recommendation logic
--	decision rules
--	scenario simulations
+    -	recommendation logic
+    -	decision rules
+    -	scenario simulations
 
 ## Objective 5: Conduct Spatial Analysis
 
@@ -161,78 +161,78 @@ Assess geographic patterns and spatial variability of trial outcomes.
 
 ### Sub-objectives:
 
-1.	Visualize trial field distribution
-2.	Explore spatial clustering of yield outcomes
-3.	Map environmental variability
-4.	Visualize recommended treatment regions
+    1.	Visualize trial field distribution
+    2.	Explore spatial clustering of yield outcomes
+    3.	Map environmental variability
+    4.	Visualize recommended treatment regions
 
 ## Expected output:
 
--	Field maps
--	Yield heatmaps
--	Treatment recommendation maps
+    -	Field maps
+    -	Yield heatmaps
+    -	Treatment recommendation maps
 
 ## Research Questions
     i.  Which urea application strategy generates the highest maize yield within each mega-environment?
     ii. Do treatment effects differ significantly across environments?
-    iii: Which environmental and management factors most strongly influence maize yield?
+    iii:    Which environmental and management factors most strongly influence maize yield?
     iv: Can maize yield be reliably predicted using observed environmental and management variables?
-    v: Can location-specific fertilizer recommendations improve decision making?
+    v:  Can location-specific fertilizer recommendations improve decision making?
 
 ## Hypotheses
 
 ### Treatment Performance
 
-H0₁: There is no significant difference in maize yield among urea application strategies.
-H1₁: At least one urea application strategy produces significantly different maize yields.
+    H0₁: There is no significant difference in maize yield among urea application strategies.
+    H1₁: At least one urea application strategy produces significantly different maize yields.
 
 ### Environment-Treatment Interaction
 
-H0₂: Treatment effectiveness does not vary across mega-environments.
-H1₂: Treatment effectiveness varies significantly across mega-environments.
+    H0₂: Treatment effectiveness does not vary across mega-environments.
+    H1₂: Treatment effectiveness varies significantly across mega-environments.
 
 ### Yield Drivers
 
-H0₃: Environmental and management variables have no significant relationship with maize yield.
-H1₃: Environmental and management variables significantly influence maize yield.
+    H0₃: Environmental and management variables have no significant relationship with maize yield.
+    H1₃: Environmental and management variables significantly influence maize yield.
 
 ### Predictive Modeling
 
-H0₄: Observed variables cannot explain meaningful variability in maize yield.
-H1₄: Observed variables explain meaningful variability in maize yield and can support predictive modeling.
+    H0₄: Observed variables cannot explain meaningful variability in maize yield.
+    H1₄: Observed variables explain meaningful variability in maize yield and can support predictive modeling.
 
 ### Spatial Effects
 
-H0₅: Maize yield exhibits no meaningful spatial pattern across trial locations.
-H1₅: Maize yield demonstrates spatial variability across locations.
+    H0₅: Maize yield exhibits no meaningful spatial pattern across trial locations.
+    H1₅: Maize yield demonstrates spatial variability across locations.
 
 ### Assumptions
 
 This analysis is conducted under the following assumptions:
--	Experimental observations are accurately recorded.
--	Treatment allocation was appropriately randomized.
--	External datasets (SoilGrids, CHIRPS) adequately represent field conditions.
--	Missing observations are either random or can be appropriately addressed.
--	Trial observations across seasons reasonably represent broader agronomic patterns.
--	Spatial and temporal uncertainty from external data sources will not substantially alter major conclusions.
+    -	Experimental observations are accurately recorded.
+    -	Treatment allocation was appropriately randomized.
+    -	External datasets (SoilGrids, CHIRPS) adequately represent field conditions.
+    -	Missing observations are either random or can be appropriately addressed.
+    -	Trial observations across seasons reasonably represent broader agronomic patterns.
+    -	Spatial and temporal uncertainty from external data sources will not substantially alter major conclusions.
 
 ### Expected Business Value
 
 This analysis is expected to provide:
--	Evidence-based fertilizer recommendations
--	Improved understanding of drivers of productivity
--	Scalable decision-support tools
--	More efficient resource allocation
--	Improved farmer outcomes
--	Stronger future trial design recommendations
+    -	Evidence-based fertilizer recommendations
+    -	Improved understanding of drivers of productivity
+    -	Scalable decision-support tools
+    -	More efficient resource allocation
+    -	Improved farmer outcomes
+    -	Stronger future trial design recommendations
 
 ## Methods
 
-- Mixed-effects models
-- Random Forest
-- Gradient Boosting
-- SHAP analysis
-- Geospatial mapping
+    - Mixed-effects models
+    - Random Forest
+    - Gradient Boosting
+    - SHAP analysis
+    - Geospatial mapping
 
 ---
 
