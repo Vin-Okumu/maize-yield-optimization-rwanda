@@ -69,11 +69,11 @@ Agricultural productivity among smallholder farmers varies substantially across 
 4.	nutrient losses
 5.	inconsistent farmer outcomes
 OAF Inc., therefore, requires a data-driven framework capable of:
- -	identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
- -	understanding major drivers influencing yield variability
- -	predicting yield outcomes under different conditions
- -	supporting location-specific fertilizer recommendations
- -	improving future decision making for field implementation
+    -	identifying fertilizer application strategies that maximize maize yield under varying environmental conditions
+    -	understanding major drivers influencing yield variability
+    -	predicting yield outcomes under different conditions
+    -	supporting location-specific fertilizer recommendations
+    -	improving future decision making for field implementation
 
 ## Project Goal
 
