@@ -4,7 +4,7 @@ for Maize Yield in Rwanda
 </h1>
 
 <p align = "center">
-<img src="images/project_banner_1.png" width="100%">
+<img src="images/project_banner_2.png" width="100%">
 </p>
 
 ## Analysis Charter:
