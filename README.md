@@ -1,6 +1,11 @@
-# Optimizing Nitrogen Application Strategies \n for Maize Yield in Rwanda
+<h1 align = "center"> 
+Optimizing Nitrogen Application Strategies <br> 
+for Maize Yield in Rwanda
+</h1>
 
-<img src="images/project_banner_01.png" width="100%">
+<p align = "center">
+<img src="images/project_banner_1.png" width="100%">
+</p>
 
 ## Analysis Charter:
 
