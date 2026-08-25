@@ -20,7 +20,7 @@ This project investigates fertilizer application strategies and their impact on 
 ## Repository Structure
 
 ```text
-|   
+
 ├── dashboard/
 |
 ├── data/
