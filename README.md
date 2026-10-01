@@ -2,19 +2,57 @@
 ---
 
 <h1 align = "center"> 
-Optimizing Nitrogen Application Strategies <br> 
-for Maize Yield in Rwanda
+Rwanda Maize Yield Optimization: Urea Trial
 </h1>
 
 <p align = "center">
-<img src="images/project_banner_2.png" width="100%">
+<img src="06_Dashboard/images/project_banner_2.png" width="100%">
 </p>
 
 ---
 
-# Rwanda Maize Yield Optimization: Urea Trial
+<h4 align = "center"> 
+Optimizing Nitrogen Application Strategies for Maize Yield in Rwanda
+</h4> 
 
-## Project Understanding and Analytical Framework
+# Project Understanding and Analytical Framework
+
+## Repository Structure
+
+```
+rwanda-maize-urea-analysis/
+│
+├── 01_Data/
+│   ├── raw/
+│   ├── external/
+│   └── processed/
+│
+├── 02_Notebooks/
+│   ├── 01_data_audit.ipynb
+│   ├── 02_data_preparation.ipynb
+│   ├── 03_eda.ipynb
+│   ├── 04_treatment_analysis.ipynb
+│   ├── 05_yield_drivers.ipynb
+│   ├── 06_yield_prediction.ipynb
+│   └── 07_spatial_analysis.ipynb
+│
+├── 03_Scripts/
+│
+├── 04_Outputs/
+│   ├── figures/
+│   ├── tables/
+│   └── models/
+│
+├── 05_Report/
+│   └── Rwanda_Maize_Urea_Trial_Report.pdf
+│
+├── 06_Dashboard/
+│   ├── images/
+│   └── screenshots
+│
+└── README.md
+```
+
 
 # 1. Background and Research Context
 
