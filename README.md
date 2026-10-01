@@ -54,7 +54,7 @@ rwanda-maize-urea-analysis/
 ```
 
 
-# 1. Background and Research Context
+# I. Background and Research Context
 
 **Evergreen Institute** is a non-profit research organization working with farmers across Africa to improve agricultural productivity and, ultimately, farmer livelihoods.
 
@@ -75,7 +75,7 @@ For this project, analysis, is tailored to to move beyond simply determining whi
 
 ---
 
-# 2. Overall Analytical Question
+# II. Overall Analytical Question
 
 The overarching question for this project is:
 
@@ -105,7 +105,7 @@ For this project, we'll separate this into four analytical questions:
 
 ---
 
-# 3. Experimental Structure
+# III. Experimental Structure
 
 Understanding the experimental structure is critical because the data are hierarchical.
 
@@ -142,9 +142,9 @@ The field is therefore being considered when designing the statistical analysis.
 
 ---
 
-# 4. What We Expect Each Dataset to Tell Us
+# IV. What Each Dataset Tells Us
 
-## 4.1 Field-Level Dataset
+## i. Field-Level Dataset
 
 The field-level dataset describes the environment in which the trial was conducted.
 
@@ -179,7 +179,7 @@ The field-level data is therefore particularly important for:
 
 ---
 
-# 5. Plot-Level Dataset
+## ii. Plot-Level Dataset
 
 The plot-level dataset contains the actual experimental treatment and agronomic information.
 
@@ -214,7 +214,7 @@ The plot-level data, therefore, remains central to:
 
 ---
 
-# 6. Soil Dataset
+## iii. Soil Dataset
 
 The soil dataset provides soil information at the plot level.
 
@@ -251,7 +251,7 @@ The purpose of adding these variables is to investigate whether differences in s
 
 ---
 
-# 7. Weather Data
+## iv. Weather Data
 
 The supplied datasets do not contain rainfall information at start of project.
 
@@ -273,7 +273,7 @@ However, this project refrains from automatically interpreting rainfall as a cau
 
 ---
 
-# 8. Data Integration Objective
+# V. Data Integration Objective
 
 The final analytical dataset combined the different information sources at the appropriate grain.
 
@@ -303,7 +303,7 @@ All joins are therefore checked carefully to ensure that combining datasets does
 
 ---
 
-# 9. Objective 1 — Urea Rate and Timing Performance
+# VI. Objective 1 — Urea Rate and Timing Performance
 
 ## Research question
 
@@ -338,7 +338,7 @@ That finding would have direct implications for extension recommendations.
 
 ---
 
-# 10. Objective 2 — Identify Yield Drivers
+# VII. Objective 2 — Identify Yield Drivers
 
 The second objective moves from:
 
@@ -398,7 +398,7 @@ Season will also be considered because growing conditions can vary substantially
 
 ---
 
-# 11. Yield Drivers vs Extension Levers
+## Yield Drivers vs Extension Levers
 
 An important distinction will be maintained throughout the analysis.
 
@@ -426,7 +426,7 @@ Therefore, the final extension recommendations should prioritize factors that ar
 
 ---
 
-# 12. Extension Decision-Support Tool
+## Extension Decision-Support Tool
 
 The final objective is not merely to produce statistical tables.
 
@@ -452,7 +452,7 @@ Where the data do not provide strong evidence that two treatments differ, the to
 
 ---
 
-# 13. Objective 3 — Predictive Yield Model
+# VIII. Objective 3 — Predictive Yield Model
 
 The project also requires a model capable of predicting maize yield.
 
@@ -487,7 +487,7 @@ The model will be treated as a **prediction tool**, not automatically as evidenc
 
 ---
 
-# 14. Objective 4 — Spatial Visualization
+# IX. Objective 4 — Spatial Visualization
 
 The geographic component will allow us to visualize where the trial fields were located.
 
@@ -504,7 +504,7 @@ The map will provide spatial context for the statistical analysis and help ident
 
 ---
 
-# 15. Key Analytical Assumptions to Investigate
+# X. Key Analytical Assumptions to Investigate
 
 Before conducting the final analysis, we need to establish whether the data support the assumptions implied by the research design.
 
@@ -546,7 +546,7 @@ Are SoilGrids and CHIRPS measurements sufficiently appropriate for the scale and
 
 ---
 
-# 16. Expected Analytical Outputs
+# XI. Expected Analytical Outputs
 
 By the end of the project, we should have produced:
 
@@ -599,7 +599,7 @@ By the end of the project, we should have produced:
 
 ---
 
-# 17. What We Ultimately Want to Be Able to Say
+# XII. What We Ultimately Want to Be Able to Say
 
 At the end of the analysis, the evidence should allow Evergreen to answer four progressively more useful questions:
 
@@ -623,7 +623,7 @@ This progression—from **description → comparison → explanation → decisio
 
 ---
 
-# 18. Important Limitations to Keep in Mind
+# XIII. Important Limitations to Keep in Mind
 
 The analysis will be based on a field trial rather than a nationally representative farmer survey.
 
@@ -643,7 +643,7 @@ These limitations will be explicitly documented in the final report.
 
 ---
 
-# 19. Analytical Workflow
+# XIV. Analytical Workflow
 
 The complete project will therefore follow this sequence:
 
