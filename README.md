@@ -15,7 +15,7 @@ Rwanda Maize Yield Optimization: Urea Trial
 Optimizing Nitrogen Application Strategies for Maize Yield in Rwanda
 </h4> 
 
-# Project Understanding and Analytical Framework
+# Breakdown and Analytical Framework
 
 ## Repository Structure
 
