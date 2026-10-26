@@ -144,6 +144,18 @@ These results identify applying 100 kg/ha of Urea entirely at V6 as the leading 
 
 Other limitations include incomplete soil coverage, unmatched field and plot records, incomplete experimental units, missing application dates, and the absence of successfully integrated external rainfall and soil estimates.
 
+### **Final advisory conclusions**
+
+For Evergreen Institute, our findings can be summarized follows:
+
+|Finding	|Evidence	|Implication for advisory decisions|
+|----|----|----|
+|Applying 100 kg/ha entirely at V6 produced the highest adjusted mean yield.	|5.117 t/ha	|Leading candidate when the objective is to maximize yield.|
+|Splitting 100 kg/ha between V6 and V10 produced a comparable yield.	|5.071 t/ha; adjusted pairwise p = 0.6532	|A reasonable alternative for further consideration.|
+|Both treatments outperformed the 50 kg/ha treatment in adjusted yield.	|Yield advantages of 0.546 and 0.500 t/ha, respectively; both statistically significant after Holm correction	|The trial supports a yield advantage from these full-rate strategies under the conditions studied.|
+|Splitting 100 kg/ha between planting and V6 performed less well than the other full-rate strategies.	|Adjusted mean of 4.715 t/ha	|Less promising when the sole objective is yield.|
+|No statistically significant treatment interactions with mega-environment or season were detected.	|Interaction p-values of 0.424 and 0.103	|The available evidence does not justify separate treatment recommendations by mega-environment or season.|
+
 ## 7. Tools and Methods
 
 - **Python:** data preparation and analysis
