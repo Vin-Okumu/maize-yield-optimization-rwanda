@@ -6,7 +6,7 @@ Rwanda Maize Fertilizer Trial: Yield Analysis & Decision Support
 </h1>
 
 <p align = "center">
-<img src="06_Dashboard/images/project_banner_2.png" width="100%">
+<img src="04_Images/project_banner_2.png" width="100%">
 </p>
 
 ---
