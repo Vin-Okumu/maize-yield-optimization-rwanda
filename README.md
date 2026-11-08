@@ -1,110 +1,72 @@
+<p align="center">
+  <img src="04_Images/project_banner_2.png" width="100%" alt="Optimizing nitrogen application strategies for maize yield in Rwanda">
+</p>
 
----
+<h1 align="center">Which fertilizer strategy actually raises maize yield?</h1>
 
-<h1 align = "center"> 
-Rwanda Maize Fertilizer Trial: Yield Analysis & Decision Support
-</h1>
+<p align="center">
+  <b>Field-trial analysis and decision support for an agricultural NGO in Rwanda</b><br>
+  Python · Mixed-effects models · Random Forest · Grouped cross-validation
+</p>
 
-<p align = "center">
-<img src="04_Images/project_banner_2.png" width="100%">
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.13-blue">
+  <img src="https://img.shields.io/badge/statsmodels-mixed--effects-green">
+  <img src="https://img.shields.io/badge/scikit--learn-Random%20Forest-orange">
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey">
 </p>
 
 ---
 
-<h4 align = "center"> 
-Optimizing Nitrogen Application Strategies for Maize Yield in Rwanda
-</h4> 
+## At a glance
 
-# Yield Analysis and Decision Support
+| | |
+|---|---|
+| **Client question** | Which of four Urea rate-and-timing strategies should extension officers recommend to farmers? |
+| **Data** | 1,598 trial plots · 401 fields · 3 seasons (21A, 22A, 22B) · 4 mega-environments · plot, field and soil tables |
+| **Answer** | Apply **100 kg/ha of Urea all at the V6 stage**: **+0.55 t/ha (≈ +12%)** over the 50 kg/ha practice, statistically significant |
+| **Also good** | Splitting 100 kg/ha between V6 and V10 gives a statistically equivalent yield (p = 0.65) |
+| **Not supported** | Splitting between planting and V6 showed no significant gain over 50 kg/ha |
+| **Deliverables** | Audited & cleaned dataset with decision log · treatment-effect model · yield-prediction model · advisory summary & slide deck |
 
-## Repository Structure
+---
 
-```
-rwanda-maize-urea-analysis/
-│
-├── 01_Data/
-│   ├── external/
-│   ├── processed/
-│   └── raw/
-│
-├── 02_Notebooks/
-│   ├── 01_data_audit.ipynb
-│   ├── 02_data_cleaning_&_integration.ipynb
-│   ├── 03_exploratory_data_analysis.ipynb
-│   ├── 04_treatment_effect_analysis.ipynb
-│   ├── 05_data_enrichment.ipynb
-│   ├── 06_yield_prediction.ipynb
-│   └── 07_fertilizer_advisory.ipynb
-│
-├── 03_Report/
-│   ├──figures/
-│   └──reports/
-│
-├── 04_Images/
-│
-└── README.md
-```
-## 1. Project Overview
+## The key result
 
-Evergreen Institute is a non-profit research organization working with farmers across Africa to improve agricultural productivity and livelihoods.
+<p align="center">
+  <img src="03_Report/figures/estimated_urea_treatment_differences_vs_50kg_ha_at_v6.png" width="80%" alt="Adjusted yield gain of each treatment over 50 kg/ha at V6, with 95% confidence intervals">
+</p>
 
-This project analyzes a maize field trial conducted across three agricultural seasons and multiple mega-environments in Rwanda. The objective was to evaluate how Urea fertilizer rates and application timings relate to maize grain yield, identify factors associated with yield variation, and translate the findings into evidence-based guidance for agricultural extension teams.
+Each point is the yield gain over the 50 kg/ha baseline after adjusting for season, environment and field-to-field variation; the bars are 95% confidence intervals. Two strategies clear zero comfortably, and one does not.
 
-**Primary research question:** How do Urea fertilizer rate and application timing affect maize yield across the environments represented in the trial?
+| Treatment | Adjusted mean yield | Gain vs. 50 kg/ha | Significant? (Holm-adjusted) |
+|---|---:|---:|:---:|
+| 50 kg/ha, all at V6 (baseline) | 4.57 t/ha | n/a | n/a |
+| 100 kg/ha, planting + V6 | 4.72 t/ha | +0.14 t/ha | No |
+| 100 kg/ha, V6 + V10 | 5.07 t/ha | +0.50 t/ha | Yes |
+| **100 kg/ha, all at V6** | **5.12 t/ha** | **+0.55 t/ha** | **Yes** |
 
-## 2. The Trial
+**One recommendation everywhere.** Treatment effects did not differ significantly by mega-environment (p = 0.42) or season (p = 0.10), so the evidence doesn't justify separate rules for each region.
 
-The analysis covers four Urea treatment combinations:
+---
 
-| Treatment | Urea rate | Application timing |
-|---|---:|---|
-| A | 50 kg/ha | All at V6 |
-| B | 100 kg/ha | Planting + V6 |
-| C | 100 kg/ha | V6 + V10 |
-| D | 100 kg/ha | All at V6 |
+## What I did
 
-The primary outcome was grain yield (`yield_tha`), measured in tonnes per hectare. The data included plot-level treatment and agronomic records, field-level environmental and geographic characteristics, and a separate plot-level soil dataset.
+1. **Audited the data.** Profiled three source tables and found unmatched field records, incomplete experimental units, season-specific missingness and an extreme 50.1 t/ha yield. Every issue went into a written decision log.
+2. **Cleaned without losing information.** Kept the raw data untouched, parsed dates, added quality flags and merged the tables. All 1,598 plots were kept and none were deleted silently.
+3. **Explored.** Compared yield distributions by treatment, season and environment.
+4. **Estimated treatment effects properly.** Plots in the same field share conditions, so I used a **linear mixed-effects model** with field as a random effect. I added Holm-corrected pairwise tests, likelihood-ratio tests for interactions, and an outlier sensitivity check.
+5. **Built a yield-prediction model.** Compared a baseline, Ridge and Random Forest using **grouped cross-validation** (whole fields held out) to mimic predicting for a new farm before planting.
+6. **Turned the results into advice.** Wrote yield-focused guidance for extension teams, including where the evidence stops.
 
-## 3. Analytical Workflow
+## Being honest about the limits
 
-The project followed an end-to-end analytical workflow:
+- **Prediction is moderate.** The Random Forest beats the baseline (MAE 1.29 vs 1.53 t/ha) but explains about 21% of the variance (32% without the extreme plot). It's a useful signal but not a forecasting tool for new locations.
+- **Soil coverage is partial.** Fewer than half the plots (736 of 1,598) had soil records, and the external SoilGrids/rainfall enrichment failed because the service timed out. The attempt is documented in notebook 05.
+- **There's no economic analysis.** The recommendation is about yield only. Fertilizer and grain prices are needed before giving profitability advice.
 
-1. **Data audit and preparation** — profiled the source tables, assessed data quality, standardized fields, parsed dates, and integrated plot, field, and available soil records.
-
-2. **Exploratory analysis** — examined yield distributions and treatment performance across seasons and mega-environments.
-
-3. **Statistical modeling** — used mixed-effects regression to estimate adjusted treatment differences and test whether treatment effects varied by season or mega-environment.
-
-4. **Agronomic analysis** — examined associations between yield and selected crop-management variables.
-
-5. **Predictive modeling** — compared a mean baseline, Ridge Regression, and Random Forest using grouped cross-validation.
-
-6. **Advisory analysis** — translated the statistical evidence into provisional yield-oriented guidance and documented the limits of economic recommendations.
-
-External soil and rainfall enrichment was not completed because the data retrieval attempts were unsuccessful. The analysis therefore relies on the supplied datasets.
-
-## 4. Key Findings
-
-### Fertilizer treatment performance
-
-The mixed-effects model estimated the following adjusted mean yields:
-
-| Treatment | Adjusted mean yield |
-|---|---:|
-| 50 kg/ha, all at V6 | 4.571 t/ha |
-| 100 kg/ha, planting + V6 | 4.715 t/ha |
-| 100 kg/ha, all at V6 | **5.117 t/ha** |
-| 100 kg/ha, V6 + V10 | 5.071 t/ha |
-
-Applying 100 kg/ha entirely at V6 produced the highest adjusted mean yield. Splitting the same rate between V6 and V10 produced a statistically comparable yield.
-
-Both strategies significantly outperformed the 50 kg/ha treatment after Holm adjustment for multiple comparisons. The planting–V6 split did not show a statistically significant yield advantage over the 50 kg/ha treatment.
-
-No statistically significant treatment-by-mega-environment or treatment-by-season interactions were detected at the 5% level. The results therefore do not establish a need for different treatment recommendations by environment or season.
-
-### Yield prediction
-
-Random Forest performed best among the three evaluated models under grouped cross-validation.
+<details>
+<summary><b>Model comparison and diagnostic plots</b></summary>
 
 | Model | MAE (t/ha) | RMSE (t/ha) | R² |
 |---|---:|---:|---:|
@@ -112,73 +74,64 @@ Random Forest performed best among the three evaluated models under grouped cros
 | Ridge Regression | 1.298 | 1.965 | 0.186 |
 | Mean baseline | 1.532 | 2.182 | -0.004 |
 
-A sensitivity analysis excluding one extreme yield observation of 50.1 t/ha improved the Random Forest's MAE to 1.216 t/ha, RMSE to 1.533 t/ha, and R² to 0.321. The observation was retained in the primary dataset because its validity was not disproved.
-
-The model captures useful yield patterns, but its predictive performance is moderate. It should not be treated as a validated forecasting system for new locations.
-
-## 5. Figures and Visualizations
-
-The following figures can be added to illustrate the analysis.
-
 <table>
   <tr>
-    <th colspan="2">Yield distribution by treatment</th>
+    <td width="50%"><img src="03_Report/figures/maize_distribution_by_urea_treatment.png" width="100%"><br><sub>Yield distribution by treatment</sub></td>
+    <td width="50%"><img src="03_Report/figures/maize_yield_by_urea_treatment_and_season.png" width="100%"><br><sub>Yield by treatment and season</sub></td>
   </tr>
   <tr>
-    <td align="center" width="50%">
-      <img src="03_Report/figures/maize_distribution_by_urea_treatment.png" alt="Maize yield distribution by Urea treatment" width="100%"><br>
-      <sub>Maize yield distribution by Urea treatment</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="03_Report/figures/maize_yield_by_urea_treatment_and_season.png" alt="Maize yield distribution by Urea treatment across season" width="100%"><br>
-      <sub>Maize yield by Urea treatment across season</sub>
-    </td>
-  </tr>
-  <tr>
-    <th colspan="2">Predictive model performance</th>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="03_Report/figures/random_forest_observed_vs_predicted_maize_yield.png" alt="Observed versus predicted maize yield" width="100%"><br>
-      <sub>Observed vs. predicted maize yield</sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="03_Report/figures/random_forest_prediction_errors.png" alt="Random forest prediction errors" width="100%"><br>
-      <sub>Random forest prediction errors</sub>
-    </td>
+    <td width="50%"><img src="03_Report/figures/random_forest_observed_vs_predicted_maize_yield.png" width="100%"><br><sub>Observed vs. predicted yield</sub></td>
+    <td width="50%"><img src="03_Report/figures/random_forest_prediction_errors.png" width="100%"><br><sub>Prediction errors</sub></td>
   </tr>
 </table>
+</details>
 
-## 6. Advisory Implications and Limitations
+---
 
-These results identify applying 100 kg/ha of Urea entirely at V6 as the leading yield-oriented option in this trial, with splitting the same rate between V6 and V10 as a statistically comparable alternative.
+## Explore the work
 
-Other limitations include incomplete soil coverage, unmatched field and plot records, incomplete experimental units, missing application dates, and the absence of successfully integrated external rainfall and soil estimates.
+| Notebook | What's inside |
+|---|---|
+| [01 Data audit](02_Notebooks/01_data_audit.ipynb) | Structure, keys, missingness, experimental-design checks |
+| [02 Cleaning & integration](02_Notebooks/02_data_cleaning_&_integration.ipynb) | Traceable cleaning, merge validation, decision log |
+| [03 EDA](02_Notebooks/03_exploratory_data_analysis.ipynb) | Yield by treatment, season, mega-environment |
+| [04 Treatment effects](02_Notebooks/04_treatment_effect_analysis.ipynb) | **Mixed-effects model, pairwise tests, sensitivity analysis** |
+| [05 Data enrichment](02_Notebooks/05_data_enrichment.ipynb) | External soil data attempt (SoilGrids) |
+| [06 Yield prediction](02_Notebooks/06_yield_prediction.ipynb) | Ridge vs Random Forest, grouped CV, error analysis |
+| [07 Fertilizer advisory](02_Notebooks/07_fertilizer_advisory.ipynb) | **Final recommendations for extension teams** |
 
-### **Final advisory conclusions**
+📊 Summary deck: [`03_Report/reports/Report Summary.pptx`](03_Report/reports/Report%20Summary.pptx) · 📘 Data dictionary: [`01_Data/codebook/Codebook.xlsx`](01_Data/codebook/Codebook.xlsx)
 
-For Evergreen Institute, our findings can be summarized follows:
+<details>
+<summary><b>Run it yourself</b></summary>
 
-|Finding	|Evidence	|Implication for advisory decisions|
-|----|----|----|
-|Applying 100 kg/ha entirely at V6 produced the highest adjusted mean yield.	|5.117 t/ha	|Leading candidate when the objective is to maximize yield.|
-|Splitting 100 kg/ha between V6 and V10 produced a comparable yield.	|5.071 t/ha; adjusted pairwise p = 0.6532	|A reasonable alternative for further consideration.|
-|Both treatments outperformed the 50 kg/ha treatment in adjusted yield.	|Yield advantages of 0.546 and 0.500 t/ha, respectively; both statistically significant after Holm correction	|The trial supports a yield advantage from these full-rate strategies under the conditions studied.|
-|Splitting 100 kg/ha between planting and V6 performed less well than the other full-rate strategies.	|Adjusted mean of 4.715 t/ha	|Less promising when the sole objective is yield.|
-|No statistically significant treatment interactions with mega-environment or season were detected.	|Interaction p-values of 0.424 and 0.103	|The available evidence does not justify separate treatment recommendations by mega-environment or season.|
+```bash
+git clone https://github.com/Vin-Okumu/maize-yield-optimization-rwanda.git
+cd maize-yield-optimization-rwanda
+conda env create -f environment.yml
+conda activate maize-yield
+jupyter lab
+```
+Run the notebooks in order (01 → 07). Raw data is in `01_Data/raw/`, and the cleaned outputs are in `01_Data/processed/`.
+</details>
 
-## 7. Tools and Methods
+<details>
+<summary><b>Repository structure</b></summary>
 
-- **Python:** data preparation and analysis
-- **Pandas and NumPy:** data manipulation
-- **Matplotlib and Seaborn:** exploratory visualizations
-- **Statsmodels:** mixed-effects regression
-- **Scikit-learn:** predictive modeling and grouped cross-validation
-- **Folium:** interactive field mapping workflow
+```
+maize-yield-optimization-rwanda/
+├── 01_Data/        raw/ · processed/ · codebook/
+├── 02_Notebooks/   01–07 analysis pipeline
+├── 03_Report/      figures/ · reports/ (summary deck)
+├── 04_Images/      banners and thumbnails
+└── environment.yml
+```
+</details>
 
-## 8. Project Outcome
+---
 
-This project demonstrates an end-to-end agricultural data-analysis workflow, from data-quality assessment and integration through statistical inference, predictive modeling, and practical interpretation.
+## Need something similar?
 
-Its central contribution is not simply identifying the treatment with the highest observed yield, but evaluating treatment differences statistically, testing their consistency across environments and seasons, assessing prediction quality, and communicating the limits of the available evidence.
+I help clients, organizations, NGOs and researchers turn messy field-trial and survey data into clear, defensible decisions. That covers experimental analysis, mixed models, predictive modelling and reports that non-technical teams can act on.
 
+**Vincent Okumu** · [Upwork](https://www.upwork.com/freelancers/uv23o9) · [LinkedIn](https://www.linkedin.com/in/vince-okumu23/) · vinny.otieno23@gmail.com
