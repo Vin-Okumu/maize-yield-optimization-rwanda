@@ -120,17 +120,34 @@ The model captures useful yield patterns, but its predictive performance is mode
 
 The following figures can be added to illustrate the analysis.
 
-### Yield distribution by treatment
-
-![Maize yield distribution by Urea treatment](03_Report/figures/maize_distribution_by_urea_treatment.png)
-
-![Maize yield distribution by Urea treatment across season](03_Report/figures/maize_yield_by_urea_treatment_and_season.png)
-
-### Predictive model performance
-
-![Observed versus predicted maize yield](03_Report/figures/random_forest_observed_vs_predicted_maize_yield.png)
-
-![Random forest prediction errors](03_Report/figures/random_forest_prediction_errors.png)
+<table>
+  <tr>
+    <th colspan="2">Yield distribution by treatment</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="03_Report/figures/maize_distribution_by_urea_treatment.png" alt="Maize yield distribution by Urea treatment" width="100%"><br>
+      <sub>Maize yield distribution by Urea treatment</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="03_Report/figures/maize_yield_by_urea_treatment_and_season.png" alt="Maize yield distribution by Urea treatment across season" width="100%"><br>
+      <sub>Maize yield by Urea treatment across season</sub>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">Predictive model performance</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="03_Report/figures/random_forest_observed_vs_predicted_maize_yield.png" alt="Observed versus predicted maize yield" width="100%"><br>
+      <sub>Observed vs. predicted maize yield</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="03_Report/figures/random_forest_prediction_errors.png" alt="Random forest prediction errors" width="100%"><br>
+      <sub>Random forest prediction errors</sub>
+    </td>
+  </tr>
+</table>
 
 ## 6. Advisory Implications and Limitations
 
