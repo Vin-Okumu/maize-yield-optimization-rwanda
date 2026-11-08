@@ -40,9 +40,7 @@ rwanda-maize-urea-analysis/
 │   ├──figures/
 │   └──reports/
 │
-├── 04_Dashboard/
-│   ├── images/
-│   └── screenshots/
+├── 04_Images/
 │
 └── README.md
 ```
