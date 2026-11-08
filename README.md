@@ -136,10 +136,10 @@ I help clients, organizations, NGOs and researchers turn messy field-trial and s
 
 My analyses cover experimental analysis, mixed models, predictive modelling and reports that non-technical teams can act on.
 
-**Vincent Okumu** · 
-
-You can invite to work on [Upwork](https://www.upwork.com/freelancers/uv23o9) · 
+Invite to work on [Upwork](https://www.upwork.com/freelancers/uv23o9) · 
 
 Reach out on [LinkedIn](https://www.linkedin.com/in/vince-okumu23/) · 
 
 Or email vinny.otieno23@gmail.com
+
+**Vincent Okumu**
