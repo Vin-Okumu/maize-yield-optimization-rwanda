@@ -124,15 +124,15 @@ The following figures can be added to illustrate the analysis.
 
 ### Yield distribution by treatment
 
-![Maize yield distribution by Urea treatment](05_Report/figures/maize_distribution_by_urea_treatment.png)
+![Maize yield distribution by Urea treatment](03_Report/figures/maize_distribution_by_urea_treatment.png)
 
-![Maize yield distribution by Urea treatment across season](05_Report/figures/maize_yield_by_urea_treatment_and_season.png)
+![Maize yield distribution by Urea treatment across season](03_Report/figures/maize_yield_by_urea_treatment_and_season.png)
 
 ### Predictive model performance
 
-![Observed versus predicted maize yield](05_Report/figures/random_forest_observed_vs_predicted_maize_yield.png)
+![Observed versus predicted maize yield](03_Report/figures/random_forest_observed_vs_predicted_maize_yield.png)
 
-![Random forest prediction errors](05_Report/figures/random_forest_prediction_errors.png)
+![Random forest prediction errors](03_Report/figures/random_forest_prediction_errors.png)
 
 ## 6. Advisory Implications and Limitations
 
