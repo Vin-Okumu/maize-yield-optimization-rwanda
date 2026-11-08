@@ -23,32 +23,26 @@ Optimizing Nitrogen Application Strategies for Maize Yield in Rwanda
 rwanda-maize-urea-analysis/
 │
 ├── 01_Data/
-│   ├── raw/
 │   ├── external/
-│   └── processed/
+│   ├── processed/
+│   └── raw/
 │
 ├── 02_Notebooks/
 │   ├── 01_data_audit.ipynb
-│   ├── 02_data_preparation.ipynb
-│   ├── 03_eda.ipynb
-│   ├── 04_treatment_analysis.ipynb
-│   ├── 05_yield_drivers.ipynb
+│   ├── 02_data_cleaning_&_integration.ipynb
+│   ├── 03_exploratory_data_analysis.ipynb
+│   ├── 04_treatment_effect_analysis.ipynb
+│   ├── 05_data_enrichment.ipynb
 │   ├── 06_yield_prediction.ipynb
-│   └── 07_spatial_analysis.ipynb
+│   └── 07_fertilizer_advisory.ipynb
 │
-├── 03_Scripts/
+├── 03_Report/
+│   ├──figures/
+│   └──reports/
 │
-├── 04_Outputs/
-│   ├── figures/
-│   ├── tables/
-│   └── models/
-│
-├── 05_Report/
-│   └── Rwanda_Maize_Urea_Trial_Report.pdf
-│
-├── 06_Dashboard/
+├── 04_Dashboard/
 │   ├── images/
-│   └── screenshots
+│   └── screenshots/
 │
 └── README.md
 ```
