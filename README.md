@@ -59,7 +59,7 @@ Each point is the yield gain over the 50 kg/ha baseline after adjusting for seas
 5. **Built a yield-prediction model.** Compared a baseline, Ridge and Random Forest using **grouped cross-validation** (whole fields held out) to mimic predicting for a new farm before planting.
 6. **Turned the results into advice.** Wrote yield-focused guidance for extension teams, including where the evidence stops.
 
-## Being honest about the limits
+## About the limits
 
 - **Prediction is moderate.** The Random Forest beats the baseline (MAE 1.29 vs 1.53 t/ha) but explains about 21% of the variance (32% without the extreme plot). It's a useful signal but not a forecasting tool for new locations.
 - **Soil coverage is partial.** Fewer than half the plots (736 of 1,598) had soil records, and the external SoilGrids/rainfall enrichment failed because the service timed out. The attempt is documented in notebook 05.
@@ -132,6 +132,14 @@ maize-yield-optimization-rwanda/
 
 ## Need something similar?
 
-I help clients, organizations, NGOs and researchers turn messy field-trial and survey data into clear, defensible decisions. That covers experimental analysis, mixed models, predictive modelling and reports that non-technical teams can act on.
+I help clients, organizations, NGOs and researchers turn messy field-trial and survey data into clear, defensible decisions. 
 
-**Vincent Okumu** · [Upwork](https://www.upwork.com/freelancers/uv23o9) · [LinkedIn](https://www.linkedin.com/in/vince-okumu23/) · vinny.otieno23@gmail.com
+My analyses cover experimental analysis, mixed models, predictive modelling and reports that non-technical teams can act on.
+
+**Vincent Okumu** · 
+
+You can invite to work on [Upwork](https://www.upwork.com/freelancers/uv23o9) · 
+
+Reach out on [LinkedIn](https://www.linkedin.com/in/vince-okumu23/) · 
+
+Or email vinny.otieno23@gmail.com
